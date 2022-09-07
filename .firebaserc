@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "game-notes-zlabidev": {
+      "hosting": {
+        "game-notes-zlabidev": [
+          "game-notes-zlabidev"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "game-notes-zlabidev"
+  }
+}
