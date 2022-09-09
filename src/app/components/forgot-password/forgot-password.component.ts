@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthService} from "../../shared/auth.service";
 
 @Component({
@@ -6,15 +6,11 @@ import {AuthService} from "../../shared/auth.service";
   templateUrl: './forgot-password.component.html',
   styleUrls: ['./forgot-password.component.scss']
 })
-export class ForgotPasswordComponent implements OnInit {
-
+export class ForgotPasswordComponent {
 
   email: string = '';
 
   constructor(private auth: AuthService) {
-  }
-
-  ngOnInit(): void {
   }
 
   forgotPassword() {
@@ -22,5 +18,4 @@ export class ForgotPasswordComponent implements OnInit {
 
     this.email = '';
   }
-
 }

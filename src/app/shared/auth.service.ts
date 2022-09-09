@@ -63,7 +63,7 @@ export class AuthService {
   }
 
   /**
-   *
+   * Forgot Password Method
    * @param email
    */
   forgotPassword(email: string) {
@@ -74,6 +74,11 @@ export class AuthService {
     });
   }
 
+  /**
+   * Method for sending email verification.
+   * @param user
+   * @private
+   */
   private sendEmailForVerification(user: User | null) {
     user?.sendEmailVerification().then((res: any) => {
       this.router.navigate(['verify-email']);

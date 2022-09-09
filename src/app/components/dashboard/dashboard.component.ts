@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthService} from "../../shared/auth.service";
 
 @Component({
@@ -6,16 +6,12 @@ import {AuthService} from "../../shared/auth.service";
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
   constructor(private auth: AuthService) {
-  }
-
-  ngOnInit(): void {
   }
 
   logout() {
     this.auth.logout();
   }
-
 }
