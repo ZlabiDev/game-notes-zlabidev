@@ -13,13 +13,17 @@ import {RegisterComponent} from './components/register/register.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {FormsModule} from "@angular/forms";
 import {FIREBASE_OPTIONS} from "@angular/fire/compat";
+import {ForgotPasswordComponent} from './components/forgot-password/forgot-password.component';
+import {VerifyEmailComponent} from './components/verify-email/verify-email.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
