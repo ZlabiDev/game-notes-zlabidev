@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/compat/auth';
+import {GoogleAuthProvider} from '@angular/fire/auth';
 import {Router} from '@angular/router';
 import firebase from "firebase/compat";
 import User = firebase.User;
@@ -47,6 +48,18 @@ export class AuthService {
     }, err => {
       alert(err.message);
       this.router.navigate(['/register']);
+    });
+  }
+
+  /**
+   * Sign in With Google Method
+   */
+  googleSignIn() {
+    this.fireAuth.signInWithPopup(new GoogleAuthProvider()).then(res => {
+      this.router.navigate(['/dashboard']);
+      localStorage.setItem('token', JSON.stringify(res.user?.uid));
+    }, err => {
+      alert(err.message);
     });
   }
 
